@@ -1,0 +1,29 @@
+Functional Interface :
+1. Only one Abstract method (method without body)
+2. Can have multiple Default and Static methods
+3. Can use lambda expressions and method references
+
+->Key Points about Functional Interfaces:
+
+#Single Abstract Method (SAM)
+-A functional interface must have only one abstract method.
+-It may have multiple default and static methods.
+
+#@FunctionalInterface Annotation (Optional but Recommended)
+-This annotation is used to ensure that the interface remains functional.
+-If more than one abstract method is added, the compiler will throw an error.
+
+#Lambda Expressions Support
+Since Java 8, functional interfaces allow us to use lambda expressions, reducing boilerplate code.
+
+#Common Functional Interfaces in Java (java.util.function Package)
+Predicate<T> – Represents a boolean-valued function (T → boolean)
+Function<T, R> – Represents a function (T → R)
+Consumer<T> – Represents an operation that accepts an argument (T → void)
+Supplier<T> – Represents a supplier of results (() → T)
+
+BiPredicate<T, U>	Takes two arguments and returns a boolean.	Checking conditions with two inputs (e.g., isGreaterThan for two numbers).
+BiFunction<T, U, R>	Takes two arguments and returns a result.	Combining two values and returning a computed result (e.g., sum of two numbers).
+BiConsumer<T, U>	Takes two arguments and returns no result (side-effect).	Performing actions like logging, updating (e.g., printFullName).
+UnaryOperator<T>	A specialization of Function<T, T>, both input and output are the same type.	Applying operations to a single value (e.g., square of a number).
+BinaryOperator<T>	A specialization of BiFunction<T, T, T>, both input and output are the same type.	Performing operations on two values of the same type (e.g., max of two numbers).
