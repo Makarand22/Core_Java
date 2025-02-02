@@ -7,7 +7,7 @@ public class BiConsumer_Example {
 //    Use case: Performing actions like printing, updating, or logging based on two inputs.
     public static void main(String[] args) {
 
-        BiConsumer<Integer, String > result = (empId, name) -> System.out.println("Employee ID : " + empId + " Emplpyee Name : " + name) ;
+        BiConsumer<Integer, String > result = (empId, name) -> System.out.println("Employee ID : " + empId + " Employee Name : " + name) ;
 
         result.accept(132, "Atul");
         result.accept(234, "Ram");
